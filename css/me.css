@@ -1,123 +1,231 @@
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
+
+
+
+/* =============================================
+	HTML5 structural elements
+   =============================================
+*/
+
+article, aside, details, dl, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
 }
 
-@font-face {
-  font-family: Montserrat-ExtraBold;
-  src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf'); 
-}
 
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
-}
+/* =============================================
+	Default colors, margins and sizing
+   =============================================
+*/
+
 html {
-    margin: 0;
-    padding: 0;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+html, button, input, select, textarea {
+	font-family: serif;
+	color: #222;
 }
 body {
-    font-family: 'Handlee', cursive;
-    font-size: 13pt;
-    background-color: #efefef;
-    padding: 10px;
-    margin: 0;
-}
-h1 {
-    font-size: 15pt;
-    color: #20bcd5;
-    text-align: center;
-    padding: 18px 0 18px 0;
-    margin: 0 0 10px 0;
-}
-h1 span {
-    border: 4px dashed #20bcd5;
-    padding: 10px;
-}
-p {
-    padding: 0;
-    margin: 0;
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.4;
 }
 
+
+/* =============================================
+	Hypertext links
+   =============================================
+*/
+
+a {
+	color: #00e;
 }
-.section {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+a:visited {
+	color: #551a8b;
+}
+a:hover {
+	color: #06e;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover, a:active {
+	outline: 0;
 }
 
+
+/* =============================================
+	Default font styles
+   =============================================
+*/
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+blockquote {
+	margin: 1em 40px;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+mark {
+	background: #ff0;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+pre, code, kbd, samp {
+	font-family: monospace, serif;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
-.quote {
-    font-size: 12pt;
-    text-align: right;
-    margin-top: 10px;
+small {
+	font-size: 85%;
 }
-.selected {
-    background-color: #f36f48;
-    font-weight: bold;
-    color: white;
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+
+/* =============================================
+	Default list styles
+   =============================================
+*/
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* =============================================
+	Default styles for images and media
+   =============================================
+*/
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+figure {
+	margin: 0;
+}
+audio, canvas, video {
+	display: inline-block;
+}
+
+
+/* =============================================
+	Default styles for web forms
+   =============================================
+*/
 
 form {
-    text-align: center;
-    margin-top: 0;
+	margin: 0;
 }
-.login-form-btn {
-    text-align: center;
-    margin-top: 20;
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
-.submit {
-    background-color: #3fb6b2;
-    padding: 12px 45px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    outline: none;
-    margin: 0;
-    font-weight: bold;
+label {
+	cursor: pointer;
 }
-.submit:hover {
-    background-color: #43a09d;
+legend {
+	border: 0;
+	padding: 0;
+	white-space: normal;
+}
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+}
+button, input {
+	line-height: normal;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+button[disabled], input[disabled] {
+	cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
 }
 textarea {
-    height: 100px;
-}
-input, textarea {
-    margin-bottom: 10px;
-    font-size: 11pt;
-    padding: 15px 10px 10px;
-    border: 1px solid #cecece;
-    background-color: #efefef;
-    color: #787575;
-    border-radius: 5px;
-    width: 70%;
-    outline: none;
-}
-.face {
-    transform: scale(0.4);
-    margin: 0 auto;
-    display: block;
-    margin-top: -35px;
-    margin-bottom: -25px;
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
 }
 
-    margin-right: 7px;
+
+
+/* =============================================
+	Default styles for web tables
+   =============================================
+*/
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-#contacts a {
-    text-decoration: none;
-}
-#contacts img:hover {
-    opacity: 0.8;
-}
-#contacts {
-    text-align: center;
-}
-.copyright {
-    font-size: 8pt;
-    text-align: right;
-    padding-bottom: 10px;
-    color: grey;
+td, th {
+	vertical-align: top;
 }
