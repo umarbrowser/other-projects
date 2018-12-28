@@ -8,7 +8,7 @@ class MainController {
 
   constructor () {
     if (!navigator.serviceWorker) return;
-    navigator.serviceWorker.register('/pyc0d3r/sw.js').then( sw => {
+    navigator.serviceWorker.register('./sw.js').then( sw => {
 	  if (!navigator.serviceWorker.controller) {
         return;
       }

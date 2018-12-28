@@ -1,10 +1,3 @@
- /**
-* Author: Wilbert Muza
-* Version: 1.0.0
-* Signature: wmuza
-* ALC Currency Converter
-*/
-
 // registering service worker cache 
 let appCacheName = 'wnes-static-v2';
 let appCacheAssets = [
