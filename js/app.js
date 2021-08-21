@@ -130,7 +130,7 @@ const fetchFromDatabase = (symbol, amount) => {
 }
 
 const fetchAllCurrencies = e => {
-	$.get('https://free.currencyconverterapi.com/api/v5/currencies', data => {
+	$.get('https://api.exchangeratesapi.io/v1/', data => {
 		if(!data) console.log("Could not fetch any data");
 		const resultdata = objectToArray(data.results);
 		for(let val of resultdata){
